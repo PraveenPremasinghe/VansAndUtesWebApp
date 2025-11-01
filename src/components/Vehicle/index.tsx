@@ -4,6 +4,7 @@ import VehicleCard from "@/components/Vehicle/VehicleCard";
 import { useEffect, useState } from "react";
 import { fetchVehicles } from "@/services/vehicles.client";
 import type { VehicleCardProps } from "@/types/vehicleCard";
+import FullPageLoader from "@/components/Common/FullPageLoader";
 
 
 const Vehicle = () => {
@@ -21,7 +22,7 @@ const Vehicle = () => {
     getVehicles();
   }, []);
 
-  if (loading) return <p className="py-10 text-center">Loading vehicles…</p>;
+  if (loading) return <FullPageLoader message="Loading our amazing fleet..." />;
   if (!vehicles.length) return <p className="py-10 text-center">No vehicles found.</p>;
 
 
