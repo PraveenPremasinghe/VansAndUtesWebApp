@@ -188,7 +188,7 @@ const Hero = () => {
           >
             {isLoading ? (
               <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-white/10 backdrop-blur-md">
-                <div className="h-8 w-8 animate-spin rounded-full border-4 border-white/20 border-t-white" />
+                <div className="h-8 w-8 animate-spin rounded-full border-4 border-white/20 border-t-white"></div>
               </div>
             ) : featuredVehicle ? (
               <div className="group relative aspect-square w-full overflow-hidden      ">
